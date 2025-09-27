@@ -1,51 +1,148 @@
-/* MarketOps360 — Coming Soon (v2 con logo y pilares) */
-:root{
-  --bg:#0a1324;
-  --card:#0f1e3d;
-  --text:#e6ecff;
-  --muted:#aab6d6;
-  --accent:#41d3ff;
-  --accent2:#53ffa6;
-  --shadow: 0 10px 30px rgba(0,0,0,.25);
-}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,'Helvetica Neue',Arial,sans-serif;
-  background: radial-gradient(1200px 800px at 10% -10%, #132a61 0%, transparent 70%) , var(--bg);
-  color:var(--text);
-  line-height:1.6;
-}
-a{color:var(--accent)}
-.container{max-width:980px;margin:0 auto;padding:24px;display:flex;flex-direction:column;min-height:100%}
-.top{margin:24px 0 8px}
-.brand{display:flex;align-items:center;gap:14px}
-.logo-img{border-radius:14px;box-shadow:var(--shadow)}
-h1{margin:0;font-size:30px;letter-spacing:.5px}
-.tagline{color:var(--muted);margin-top:6px}
-.card.hero{
-  margin:28px 0;
-  background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00)), var(--card);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:18px;
-  padding:28px;
-  box-shadow:var(--shadow);
-}
-.card h2{font-size:28px;margin:0 0 8px}
-.card p{margin:0 0 18px}
-.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:8px 0 12px}
-.pill{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:14px}
-.pill h3{margin:0 0 6px;font-size:18px}
-.countdown{display:grid;grid-template-columns:repeat(4,minmax(70px,1fr));gap:12px;margin:8px 0 18px}
-.countdown div{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:14px;text-align:center}
-.countdown span{font-size:26px;font-weight:700;display:block}
-.countdown small{color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-.form{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
-.form input{flex:1 1 260px;padding:12px 14px;border-radius:12px;border:none;background:#0b1b38;color:var(--text);outline:none}
-.form button{padding:12px 16px;border-radius:12px;border:none;cursor:pointer;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#071021;font-weight:700;transition:transform .12s ease}
-.form button:active{transform:scale(.98)}
-.alt-contact{color:var(--muted);margin-top:10px}
-.foot{margin-top:auto;padding:20px 0;color:var(--muted);text-align:center}
-@media (max-width:820px){.pillars{grid-template-columns:1fr}}
-@media (max-width:540px){.countdown{grid-template-columns:repeat(2,1fr)}}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MarketOps360 | Expertos en Canal Tradicional de Bolivia</title>
+  <meta name="description" content="Inteligencia de mercado, rutas y distribución en Bolivia. Encuestadores expertos en canal tradicional, paneles de precio y optimización de cobertura.">
+  <meta name="keywords" content="encuestadores Bolivia, canal tradicional, rutas de distribución, inteligencia de mercado, trade marketing, levantamiento de precios">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="ISOTIPO.png">
+  <!-- Open Graph -->
+  <meta property="og:title" content="MarketOps360 | Canal Tradicional Bolivia">
+  <meta property="og:description" content="Ejecución en PDV, rutas eficientes y analítica práctica para trade & ventas.">
+  <meta property="og:image" content="ISOTIPO.png">
+  <meta property="og:type" content="website">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"MarketOps360",
+    "url":"https://marketops360.com",
+    "logo":"https://marketops360.com/ISOTIPO.png",
+    "sameAs":[]
+  }
+  </script>
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="wrap">
+      <span>Inteligencia de Mercado · Rutas · Distribución</span>
+      <a class="top-cta" href="mailto:contacto@marketops360.com">contacto@marketops360.com</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="wrap header-grid">
+      <a href="/" class="brand">
+        <img src="ISOTIPO.png" alt="MarketOps360" class="logo" />
+        <span class="brand-text">MarketOps<span class="accent">360</span></span>
+      </a>
+      <nav class="nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#por-que">Por qué nosotros</a>
+        <a href="#contacto" class="btn small">Contáctanos</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>Expertos en el <span class="mark">canal tradicional</span> de Bolivia</h1>
+      <p class="lead">
+        Diseñamos <strong>rutas eficientes</strong>, medimos <strong>cobertura real</strong>,
+        y optimizamos la llegada del preventista o autoventista con <strong>analítica práctica</strong>.
+      </p>
+      <div class="cta-row">
+        <a href="#contacto" class="btn">Solicitar propuesta</a>
+        <a href="#servicios" class="btn ghost">Ver servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust strip (opcional: logos de clientes) -->
+  <section class="strip">
+    <div class="wrap strip-grid">
+      <span>Operación en: La Paz · El Alto · Santa Cruz · Cochabamba · Tarija · Oruro · Sucre</span>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="features">
+    <div class="wrap">
+      <h2>Soluciones</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Distribución & Rutas</h3>
+          <p>Diseño de territorios, secuencias y frecuencias óptimas para maximizar cobertura efectiva y reducir costos logísticos.</p>
+          <ul>
+            <li>Microzonas y clústeres</li>
+            <li>Rutas por ciclo ±5 días</li>
+            <li>KPIs de productividad</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Datos de Campo</h3>
+          <p>Levantamiento y paneles de monitoreo en punto de venta: precio, inventario, visibilidad y auditorías fotográficas.</p>
+          <ul>
+            <li>Encuestadores en canal tradicional</li>
+            <li>Muestreo y control de calidad</li>
+            <li>Paneles mensuales y diarios</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Inteligencia de Mercado</h3>
+          <p>Modelos de potencial, segmentación y tableros accionables para equipos de trade & ventas.</p>
+          <ul>
+            <li>Looker Studio / Sheets</li>
+            <li>Alertas y scoring por PDV</li>
+            <li>Analítica de cobertura real</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por qué nosotros -->
+  <section id="por-que" class="why">
+    <div class="wrap">
+      <h2>¿Por qué MarketOps360?</h2>
+      <div class="grid-2">
+        <div>
+          <h4>Especialistas en el canal tradicional</h4>
+          <p>Experiencia operativa en miles de PDVs en Bolivia con foco en ejecución y resultados.</p>
+        </div>
+        <div>
+          <h4>Métricas que importan</h4>
+          <p>Adherencia a ruta (±5 días), lealtad de panel, SOVI/SOCI y productividad por microzona.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contact">
+    <div class="wrap">
+      <h2>Conversemos</h2>
+      <p>Cuéntanos tu reto de cobertura o distribución y armamos una propuesta.</p>
+      <div class="cta-row">
+        <a class="btn" href="mailto:contacto@marketops360.com?subject=Propuesta%20MarketOps360">contacto@marketops360.com</a>
+        <a class="btn ghost" href="gracias.html">Agendar una llamada</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <small>© 2025 MarketOps360 · Todos los derechos reservados</small>
+      <a href="robots.txt">Robots</a>
+    </div>
+  </footer>
+</body>
+</html>
